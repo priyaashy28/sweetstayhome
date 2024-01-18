@@ -1,0 +1,158 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  section {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .navigation {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    padding: 0.5rem 0rem;
+    background-color: #545454;
+    color: #ffffff;
+    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+  }
+
+  .brand-name {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+  }
+
+  .hero {
+    background-color: #000000;
+    background-image: linear-gradient(rgba(55, 52, 52, 0.7), rgba(83, 72, 72, 0.7)), url(./assets/image2.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+    height:450px;
+    width:800px;
+  }
+  .navigation-menu {
+    margin-left: auto;
+  }
+  
+  .active {
+    font-weight: bold;
+  }
+  
+  .navigation-menu ul {
+    display: flex;
+   /* gap: 1rem;
+    font-size: 0.9rem;
+    list-style: none;*/
+    padding: 0;
+  }
+  
+  .navigation-menu li {
+    cursor: pointer;
+    /*removes default disc bullet for li tags and applies margin to left & right side*/
+    list-style-type: none;
+    margin: 0 1rem;
+  }
+  
+  .navigation-menu a {
+    color: #ffffff;
+  }
+  .contact {
+    text-align: center;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+  Form {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .hamburger {
+    /* removes default border on button element*/
+    border: 0;
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  /* positions the icon to the right and center aligns it vertically*/
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    display: none;
+  }
+
+  .hamburger:hover {
+    background-color: #2642af;
+  }
+
+  .aboutItalic {
+    font-style: italic;
+  }
+
+  .aboutMain {
+    align-items: center;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    width: 70%;
+    background-image: url("./assets/image2.jpg");
+  }
+
+  @media screen and (max-width: 550px) {
+    .hamburger {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .navigation-menu ul {
+      /* navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar)*/
+      position: absolute;
+      top: 60px;
+      left: 0;
+      /* stacks the li tags vertically */
+      flex-direction: column;
+     /* makes menu span full height and width*/
+      width: 100%;
+      height: calc(100vh - 60px);
+      background-color: white;
+      border-top: 1px solid black;
+      display: none;
+    }
+
+    .navigation-menu li {
+      /* centers link text and strips off margin*/
+      text-align: center;
+      margin: 0;
+      color: black;
+      /* increases the surface area of the anchor tag to span the full width of the menu*/
+      width: 100%;
+      padding: 1.5rem 0;
+    }
+
+    .navigation-menu li:hover {
+      background-color: #eee;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .navigation-menu.expanded ul {
+      display: block;
+    }
+  }
