@@ -1,6 +1,7 @@
 import About from "./about";
 import Bookings from "./bookings";
 import Contact from "./contact";
+import Gallery from "./gallery";
 import Navbar from "./Navbar";
 import Services from "./services";
 
@@ -12,6 +13,9 @@ function App() {
       </header>
       <section id="about">
         <About />
+      </section>
+      <section id="gallery">
+        <Gallery />
       </section>
       <section id="services">
         <Services />

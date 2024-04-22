@@ -1,4 +1,4 @@
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Box, Divider, Paper, Stack, Typography, styled } from "@mui/material";
 
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import BathroomIcon from "@mui/icons-material/Bathroom";
@@ -17,122 +17,97 @@ import MicrowaveIcon from "@mui/icons-material/Microwave";
 import React from "react";
 import TvIcon from "@mui/icons-material/Tv";
 import WifiIcon from "@mui/icons-material/Wifi";
-import { styled } from "@mui/material/styles";
 
 const Item = styled(Paper)(({ theme }) => ({
-  //backgroundColor: "#545454",
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: "center",
   color: theme.palette.text.secondary,
-  borderColor: "#545454",
+  flexGrow: 1,
+  width: "100px",
 }));
 
 export default function Services() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid
-        container
-        spacing={{ xs: 2, md: 3 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
+    <Box>
+      <Stack
+        direction="row"
+        divider={<Divider orientation="vertical" flexItem />}
+        spacing={2}
+        mb={3}
       >
-        <Grid item xs={3} display="grid">
-          <Item>
-            <FlatwareIcon />
-            <Typography variant="subtitle2">Cookware</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3} display="grid">
-          <Item>
-            <CoffeeMakerIcon />
-            <Typography variant="subtitle2">Coffee maker</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3} display="grid">
-          <Item>
-            <MicrowaveIcon />
-            <Typography variant="subtitle2">Microwave</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3} display="grid">
-          <Item>
-            <CountertopsIcon />
-            <Typography variant="subtitle2">Equipped kitchen</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3} display="grid">
-          <Item>
-            <KitchenIcon />
-            <Typography variant="subtitle2">Fridge</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <LocalLaundryServiceIcon />
-            <Typography variant="subtitle2">Washing machine</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <BathroomIcon />
-            <Typography variant="subtitle2">Fitted bathroom</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <DryCleaningIcon />
-            <Typography variant="subtitle2">Drying provisions</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <DeckIcon />
-            <Typography variant="subtitle2">Private patio</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <KingBedIcon />
-            <Typography variant="subtitle2">Spacious Bedroom</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <TvIcon />
-            <Typography variant="subtitle2">TV</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <MedicalServicesIcon />
-            <Typography variant="subtitle2">First aid kit</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <IronIcon />
-            <Typography variant="subtitle2">Iron</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <AcUnitIcon />
-            <Typography variant="subtitle2">A/C (Payable)</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <WifiIcon />
-            <Typography variant="subtitle2">Wifi</Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <BedroomChildIcon />
-            <Typography variant="subtitle2">Extra bed</Typography>
-          </Item>
-        </Grid>
-      </Grid>
+        <Item>
+          <FlatwareIcon />
+          <Typography variant="body1">Cookware</Typography>
+        </Item>
+        <Item>
+          <CoffeeMakerIcon />
+          <Typography variant="body1">Coffee maker</Typography>
+        </Item>
+        <Item>
+          <MicrowaveIcon />
+          <Typography variant="body1">Microwave</Typography>
+        </Item>
+        <Item>
+          <CountertopsIcon />
+          <Typography variant="body1">Equipped kitchen</Typography>
+        </Item>
+        <Item>
+          <KitchenIcon />
+          <Typography variant="body1">Fridge</Typography>
+        </Item>
+        <Item>
+          <LocalLaundryServiceIcon />
+          <Typography variant="body1">Washing machine</Typography>
+        </Item>
+        <Item>
+          <BathroomIcon />
+          <Typography variant="body1">Fitted bathroom</Typography>
+        </Item>
+        <Item>
+          <DryCleaningIcon />
+          <Typography variant="body1">Drying provisions</Typography>
+        </Item>
+      </Stack>
+      <Stack
+        direction="row"
+        divider={<Divider orientation="vertical" flexItem />}
+        spacing={2}
+      >
+        <Item>
+          <DeckIcon />
+          <Typography variant="body1">Private patio</Typography>
+        </Item>
+        <Item>
+          <KingBedIcon />
+          <Typography variant="body1">Spacious Bedroom</Typography>
+        </Item>
+        <Item>
+          <TvIcon />
+          <Typography variant="body1">TV</Typography>
+        </Item>
+        <Item>
+          <MedicalServicesIcon />
+          <Typography variant="body1">First aid kit</Typography>
+        </Item>
+        <Item>
+          <IronIcon />
+          <Typography variant="body1">Iron</Typography>
+        </Item>
+        <Item>
+          <AcUnitIcon />
+          <Typography variant="body1">A/C (Payable)</Typography>
+        </Item>
+        <Item>
+          <WifiIcon />
+          <Typography variant="body1">Wifi</Typography>
+        </Item>
+        <Item>
+          <BedroomChildIcon />
+          <Typography variant="body1">Extra bed</Typography>
+        </Item>
+      </Stack>
     </Box>
   );
 }

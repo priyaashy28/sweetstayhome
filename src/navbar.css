@@ -30,16 +30,21 @@
     margin-left: 1rem;
   }
 
+  .discount {
+    color: brown;
+    font-weight: bolder;
+    margin-left: 5px;
+  }
+
   .hero {
-    background-color: #000000;
-    background-image: linear-gradient(rgba(55, 52, 52, 0.7), rgba(83, 72, 72, 0.7)), url(./assets/image2.jpg);
+    background-color: #545454;
     background-position: center;
     background-size: cover;
     color: #ffffff;
     padding: 1em;
     text-align: center;
-    height:450px;
-    width:800px;
+    height:300px;
+    width:600px;
   }
   .navigation-menu {
     margin-left: auto;
@@ -55,6 +60,7 @@
     font-size: 0.9rem;
     list-style: none;*/
     padding: 0;
+    
   }
   
   .navigation-menu li {
@@ -62,6 +68,7 @@
     /*removes default disc bullet for li tags and applies margin to left & right side*/
     list-style-type: none;
     margin: 0 1rem;
+    color: #ffffff;
   }
   
   .navigation-menu a {
@@ -97,7 +104,7 @@
   }
 
   .hamburger:hover {
-    background-color: #2642af;
+    background-color: #000000;
   }
 
   .aboutItalic {
@@ -114,6 +121,16 @@
     background-image: url("./assets/image2.jpg");
   }
 
+  .carousel-root{
+    width: 500px;
+    height: 400px;
+  }
+
+  .bookingLink {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
   @media screen and (max-width: 550px) {
     .hamburger {
       display: block;
@@ -125,11 +142,11 @@
       /* navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar)*/
       position: absolute;
       top: 60px;
-      left: 0;
+      right: 0;
       /* stacks the li tags vertically */
       flex-direction: column;
      /* makes menu span full height and width*/
-      width: 100%;
+      width: 50%;
       height: calc(100vh - 60px);
       background-color: white;
       border-top: 1px solid black;
@@ -146,8 +163,10 @@
       padding: 1.5rem 0;
     }
 
-    .navigation-menu li:hover {
-      background-color: #eee;
+    .navigation-menu a {
+      color:#000000;
+      font-weight: bold;
+      font-size: large;
     }
   }
 

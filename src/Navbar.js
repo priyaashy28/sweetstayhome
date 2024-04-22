@@ -41,6 +41,11 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
+            <Link activeClass="active" smooth spy to="gallery">
+              GALLERY
+            </Link>
+          </li>
+          <li>
             <Link activeClass="active" smooth spy to="services">
               SERVICES
             </Link>
